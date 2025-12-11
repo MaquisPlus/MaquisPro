@@ -2,9 +2,33 @@
   "expo": {
     "name": "MaquisPro+",
     "slug": "maquispro-plus",
-    "owner": "maquisprog",   // 👈 AJOUTE CETTE LIGNE
+    "owner": "maquisprog",
     "version": "1.0.1",
-    ...
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#19386A"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.maquispro.plus"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#19386A"
+      },
+      "package": "com.maquispro.plus"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
     "extra": {
       "eas": {
         "projectId": "50ea66e0-053c-48d5-ac41-d226e0869797"
