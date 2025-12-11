@@ -18,23 +18,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'pnpm'  # active le cache pour pnpm
 
       - name: 🛠️ Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 8  # ou la version que tu utilises localement
+          version: 8  # ou la version utilisée dans ton projet
 
       - name: 📦 Install dependencies
         run: pnpm install
 
       - name: 🔧 Install EAS CLI
-        run: npm install -g eas-cli
+        run: pnpm add -g eas-cli  # utilise pnpm pour installer eas-cli aussi
 
       - name: 🔐 Authenticate with Expo
         run: eas login --non-interactive
         env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+          EXPO_TOKEN: ${{ DRL3pFL8ATqt3fgrqQqwIZzLSwOWEaUEyLWt78zo }}
 
-      - name: 🏗️ Start EAS Android Build (APK)
+      - name: 🏗️ Build Android APK
         run: eas build --platform android --profile preview --non-interactive
