@@ -10,9 +10,8 @@ jobs:
     name: Build Android APK via EAS
     runs-on: ubuntu-latest
 
-    # 👇 Ajoute cette section pour définir EXPO_TOKEN pour tout le job
     env:
-      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}  # 👈 IMPORTANT : au niveau du job
 
     steps:
       - name: 📥 Checkout code
