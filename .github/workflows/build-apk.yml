@@ -22,18 +22,18 @@ jobs:
       - name: 🛠️ Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 8  # ou la version utilisée dans ton projet
+          version: 10.23.0
 
       - name: 📦 Install dependencies
         run: pnpm install
 
       - name: 🔧 Install EAS CLI
-        run: pnpm add -g eas-cli  # utilise pnpm pour installer eas-cli aussi
+        run: pnpm add -g eas-cli
 
       - name: 🔐 Authenticate with Expo
         run: eas login --non-interactive
         env:
-          EXPO_TOKEN: ${{ DRL3pFL8ATqt3fgrqQqwIZzLSwOWEaUEyLWt78zo }}
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
-      - name: 🏗️ Build Android APK
+      - name: 🏗️ Build Android APK (preview)
         run: eas build --platform android --profile preview --non-interactive
