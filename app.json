@@ -2,8 +2,9 @@
   "expo": {
     "name": "MaquisPro+",
     "slug": "maquispro-plus",
+    "owner": "maquisprog",   // 👈 AJOUTE CETTE LIGNE
     "version": "1.0.1",
-    // ... autres champs ...
+    ...
     "extra": {
       "eas": {
         "projectId": "50ea66e0-053c-48d5-ac41-d226e0869797"
