@@ -18,12 +18,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'pnpm'
+          cache: 'pnpm'  # active le cache pour pnpm
 
       - name: 🛠️ Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 8  # ou la version que tu utilises localement
 
       - name: 📦 Install dependencies
         run: pnpm install
